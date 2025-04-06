@@ -9,6 +9,7 @@ var path = require('path')
 var extract = require('extract-zip')
 var download = require('electron-download')
 
+var arch = 'x64'
 var platform = os.platform()
 
 function onerror (err) {
@@ -17,14 +18,18 @@ function onerror (err) {
 
 var paths = {
   darwin: path.join(__dirname, './dist/Electron.app/Contents/MacOS/Electron'),
-  linux: path.join(__dirname, './dist/electron'),
+//  linux: path.join(__dirname, './dist/electron'), // Unity WebPlayer not supported
   win32: path.join(__dirname, './dist/electron.exe')
 }
 
 if (!paths[platform]) throw new Error('Unknown platform: ' + platform)
 
+// while 64 bit Unity WebPlayer exists on Windows, it is not as 
+// stable and has a constant watermark in the bottom right corner
+if (platform == 'win32') arch = 'ia32';
+
 // downloads if not cached
-download({version: version}, extractFile)
+download({version: version, arch: arch}, extractFile)
 
 // unzips and makes path.txt point at the correct executable
 function extractFile (err, zipPath) {

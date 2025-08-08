@@ -4,7 +4,7 @@
   "description": "Install electron (formerly called atom-shell) prebuilts using npm",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OpenATBP/electron-prebuilt"
+    "url": "https://github.com/OpenExonaut/electron-prebuilt"
   },
   "scripts": {
     "cache-clean": "rm -rf ~/.electron && rm -rf dist",
@@ -28,7 +28,7 @@
   "author": "Mathias Buus",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/electron-prebuilt/issues"
+    "url": "https://github.com/OpenExonaut/electron-prebuilt/issues"
   },
-  "homepage": "https://github.com/mafintosh/electron-prebuilt"
+  "homepage": "https://github.com/OpenExonaut/electron-prebuilt"
 }

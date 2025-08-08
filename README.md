@@ -1,7 +1,5 @@
 # electron-prebuilt
 
-[![build status](http://img.shields.io/travis/mafintosh/electron-prebuilt.svg?style=flat)](http://travis-ci.org/mafintosh/electron-prebuilt)
-
 Install [electron](https://github.com/atom/electron) (formerly called **atom-shell**) prebuilt binaries for command-line use using npm.
 
 Works on Mac, Windows and Linux OSes that Electron supports (e.g. Electron [does not support Windows XP](https://github.com/atom/electron/issues/691)).
